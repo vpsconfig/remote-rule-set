@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: vpsconfig/convert_rules
+          repository: vpsconfig/remote-rule-set
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Environment Variables and Configure Git
