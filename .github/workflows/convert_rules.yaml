@@ -25,7 +25,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          echo "BUILDTIME=$(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+          echo "BUILDTIME=$(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
           echo "REPODIR=$PWD" >> $GITHUB_ENV
           mkdir -p $(dirname ./rule/Clash/Hijacking/Hijacking_OCD_Domain.mrs) && wget -O ./rule/Clash/Hijacking/Hijacking_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/Hijacking/Hijacking_OCD_Domain.mrs
           mkdir -p $(dirname ./rule/Clash/Hijacking/Hijacking_OCD_IP.mrs) && wget -O ./rule/Clash/Hijacking/Hijacking_OCD_IP.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/Hijacking/Hijacking_OCD_IP.mrs
@@ -57,6 +57,8 @@ jobs:
           mkdir -p $(dirname ./rule/Clash/GlobalMedia/GlobalMedia_OCD_Domain.mrs) && wget -O ./rule/Clash/GlobalMedia/GlobalMedia_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia_OCD_Domain.mrs
           mkdir -p $(dirname ./rule/Clash/iCloud/iCloud_OCD_Domain.mrs) && wget -O ./rule/Clash/iCloud/iCloud_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/iCloud/iCloud_OCD_Domain.mrs
           mkdir -p $(dirname ./rule/Clash/PikPak/PikPak_OCD_Domain.mrs) && wget -O ./rule/Clash/PikPak/PikPak_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/PikPak/PikPak_OCD_Domain.mrs
+          mkdir -p $(dirname ./rule/Clash/Reddit/Reddit_OCD_Domain.mrs) && wget -O ./rule/Clash/Reddit/Reddit_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/Reddit/Reddit_OCD_Domain.mrs
+          mkdir -p $(dirname ./rule/Clash/Mozilla/Mozilla_OCD_Domain.mrs) && wget -O ./rule/Clash/Mozilla/Mozilla_OCD_Domain.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/Mozilla/Mozilla_OCD_Domain.mrs
           mkdir -p $(dirname ./rule/Clash/Lan/Lan_OCD_IP.mrs) && wget -O ./rule/Clash/Lan/Lan_OCD_IP.mrs https://raw.githubusercontent.com/peiyingyao/Rule-for-OCD/refs/heads/master/rule/Clash/Lan/Lan_OCD_IP.mrs
       # 运行 subconverter, 将 .list 转为 .yaml
       - name: Run subconverter
